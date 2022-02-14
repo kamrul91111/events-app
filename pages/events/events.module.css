@@ -1,0 +1,25 @@
+.errorContainer {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  place-items: center;
+  line-height: 0.5;
+}
+
+.thumbnailContainer {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  top: 145px;
+  width: 100%;
+}
+
+.thumbnail {
+  width: 50%;
+}
+
+.details {
+  margin-top: 30%;
+  padding: 15px;
+  text-align: center;
+}

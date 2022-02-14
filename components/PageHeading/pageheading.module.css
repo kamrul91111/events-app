@@ -1,0 +1,7 @@
+.headingContainer {
+  height: 20vh;
+  color: black;
+  font-size: 1.2em;
+  display: grid;
+  place-items: center;
+}

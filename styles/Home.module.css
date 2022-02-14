@@ -1,9 +1,6 @@
-.container {
-  padding: 0 2rem;
-}
-
 .itemContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
+
