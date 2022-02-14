@@ -1,0 +1,13 @@
+.container {
+  white-space: pre-wrap;
+  border: 0.5px solid black;
+  margin: 15px;
+  border-radius: 10px;
+  width: 50vh;
+}
+
+.imageStyle {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
