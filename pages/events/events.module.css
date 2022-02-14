@@ -10,8 +10,9 @@
   display: grid;
   place-items: center;
   position: absolute;
-  top: 175px;
+  top: 195px;
   width: 100%;
+  z-index: 10;
 }
 
 .thumbnail {

@@ -7,12 +7,12 @@ const Header = () => {
     <header className={classes.header}>
       <div className={classes.logo}>
         {/* take back to the home page */}
-        <Link href="/">Events</Link>
+        <Link href="/">Home</Link>
       </div>
       <nav className={classes.navigation}>
-        <ul>
+        <ul style={{listStyle: 'none'}}>
           <li>
-            <Link href="/events">Events</Link>
+            <Link href="/events">All Events</Link>
           </li>
         </ul>
       </nav>

@@ -16,7 +16,7 @@ const DUMMY_EVENTS = [
       "We know: Networking is no fun if you are an introvert person. That's why we came up with this event - it'll be so much easier. Promised!",
     location: "New Wall Street 5, 98765 New Work",
     date: "2021-05-30",
-    image: "https://imageio.forbes.com/specials-images/dam/imageserve/1135040422/960x0.jpg?fit=bounds&format=jpg&width=960",
+    image: "https://cdn.pixabay.com/photo/2015/01/09/11/08/startup-594090_960_720.jpg",
     isFeatured: true,
   },
   {
