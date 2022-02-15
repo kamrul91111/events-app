@@ -1,6 +1,7 @@
 import React from "react";
 import {getAllEvents} from "../../dummy-data";
 import classes from "./events.module.css";
+import { useRouter } from "next/router";
 
 // components
 import PageHeading from "./../../components/PageHeading/PageHeading";
@@ -9,12 +10,19 @@ import EventsSearch from "../../components/EventsSearch/EventsSearch";
 
 const Events = () => {
   const events = getAllEvents(); //grab all events from dummy data.
+  const router = useRouter() 
+
+  // grab year and month
+  const findEventsHandler = (year, month) => {
+    const fullPath = `/events/${year}/${month}`
+    router.push(fullPath)
+  }
 
   return (
     <div>
       <PageHeading text="events" color="brown" />
       {/* filter component */}
-      <EventsSearch />
+      <EventsSearch  onSearch={findEventsHandler} />
       <div className={classes.eventsContainer}>
         {events.map(i => (
           <EventComponent item={i} />
