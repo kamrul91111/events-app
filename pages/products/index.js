@@ -2,6 +2,7 @@ import React from 'react'
 import classes from './products.module.css'
 import fs from 'fs/promises'
 import path from 'path'
+import Link from 'next/link'
 
 // components
 import PageHeading from './../../components/PageHeading/PageHeading'
@@ -11,11 +12,23 @@ const Products = ({ products }) => {
   return (
     <div>
       <PageHeading text='Products' color='darkgreen' />
-      {products.map(p => (
-        <div key={p.id}>
-          <h4>{p.title}</h4>
-        </div>
-      ))}
+      <div className={classes.pContainer}>
+        {products.map(p => (
+          <div
+            key={p.id}
+            style={{
+              margin: 4,
+              backgroundColor: 'black',
+              cursor: 'pointer',
+              padding: 5
+            }}
+          >
+            <Link href={`/products/${p.id}`}>
+              <h4>{p.title}</h4>
+            </Link>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
