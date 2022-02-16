@@ -4,3 +4,22 @@
   justify-content: center;
 }
 
+.banner {
+  background-color: #333;
+  margin: auto;
+  padding: 15px;
+  width: 70%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.button {
+  padding: 15px;
+  background-color: yellow;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
