@@ -41,6 +41,11 @@ export const getStaticProps = async context => {
   // filter through all data and only grab the one which matches with url param
   const product = data.products.find(product => product.id === productId)
 
+  // no product is found, show 404 page
+  if (!product) {
+  return {notFound: true}
+  }
+
   return {
     props: {
       loadedProduct: product
@@ -61,8 +66,8 @@ export const getStaticPaths = async () => {
   return {
     paths: paramIds,
     // generate pages just in time, those who are not in path
-    // fallback: true
-    fallback: 'blocking' // means render the page and only then return component
+    fallback: true
+    // fallback: 'blocking' // means render the page and only then return component
   }
 }
 
