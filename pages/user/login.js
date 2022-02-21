@@ -4,6 +4,7 @@ const login = () => {
   const emailRef = useRef()
   const feedbackRef = useRef()
 
+  // submit form
   const handler = e => {
     e.preventDefault() //prevent default loading
 
@@ -24,10 +25,11 @@ const login = () => {
         'Content-Type': 'application/json'
       }
     })
-    .then(res => res.json())
-    .then(data => console.log(data))
-    .catch(err => console.log(err))
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(err => console.log(err))
   }
+
 
   return (
     <div>

@@ -1,13 +1,11 @@
 import React from 'react'
 
 const UserProfile = ({ username }) => {
-  return <div>user-profile</div>
+  return <div>User-Profile</div>
 }
 
 // server side codes
 export const getServerSideProps = async context => {
-  const { params, req, res } = context
-
   return {
     props: {
       username: 'Kamrul'
