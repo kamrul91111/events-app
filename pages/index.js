@@ -1,6 +1,7 @@
 import styles from '../styles/Home.module.css'
 import { getFeaturedEvents } from './../dummy-data'
-import Link from "next/link";
+import Link from 'next/link'
+import Head from 'next/head'
 
 // components
 import PageHeading from '../components/PageHeading/PageHeading'
@@ -12,6 +13,13 @@ const Home = () => {
 
   return (
     <div className={styles.container}>
+      <Head>
+        <title>Featured Events</title>
+        <meta
+          title='description'
+          content='All featured events of our company'
+        />
+      </Head>
       <PageHeading text='Exciting Events' color='limegreen' />
       <div className={styles.itemContainer}>
         {featuredEvents.map(f => (

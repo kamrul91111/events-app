@@ -27,7 +27,7 @@ const grabData = async () => {
   // convert json to a js object
   const data = JSON.parse(jsonData)
 
-  return data;
+  return data
 }
 
 // server side code
@@ -43,13 +43,15 @@ export const getStaticProps = async context => {
 
   // no product is found, show 404 page
   if (!product) {
-  return {notFound: true}
+    return { notFound: true }
   }
 
   return {
     props: {
       loadedProduct: product
-    }
+    },
+    // revalidate data every 10 seconds
+    revalidate: 10
   }
 }
 
@@ -61,7 +63,7 @@ export const getStaticPaths = async () => {
   // an array that holds all ids
   const ids = data.products.map(p => p.id)
   // in the needed format for next js
-  const paramIds = ids.map(i => ({params: {pId: i}}))
+  const paramIds = ids.map(i => ({ params: { pId: i } }))
 
   return {
     paths: paramIds,

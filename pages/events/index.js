@@ -2,6 +2,7 @@ import React from "react";
 import {getAllEvents} from "../../dummy-data";
 import classes from "./events.module.css";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 // components
 import PageHeading from "./../../components/PageHeading/PageHeading";
@@ -20,6 +21,10 @@ const Events = () => {
 
   return (
     <div>
+      <Head>
+        <title>All Events</title>
+        <meta title='description' content='All events of our company' />
+      </Head>
       <PageHeading text="events" color="brown" />
       {/* filter component */}
       <EventsSearch  onSearch={findEventsHandler} />
